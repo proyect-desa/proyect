@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Sport - Equipos Médicos de Oxígeno</title>
+    
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Air <span>Sport</span></a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#informacion">Información Médica</a>
+                <a href="#datos">Estadísticas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Oxígeno Medicinal de Alta Calidad</h1>
+            <p>Suministro confiable de tanques de oxígeno para hospitales, clínicas y pacientes. Certificados por las
+                autoridades sanitarias.</p>
+            <a href="#informacion" class="cta-button">Información para Hospitales</a>
+        </div>
+    </section>
+
+    <section id="informacion" class="info-section">
+        <h2 class="section-title">Información sobre Oxígeno Medicinal</h2>
+        <p class="section-subtitle">Conozca las especificaciones técnicas y beneficios de nuestro oxígeno de grado
+            médico</p>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <i class="fas fa-microscope"></i>
+                <h3>Pureza Medicinal</h3>
+                <p>Oxígeno con 99.5% de pureza, cumpliendo estrictamente con la Farmacopea y normas de la
+                    COFEPRIS/ANVISA.</p>
+                <span class="medical-badge">Grado Médico</span>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-flask"></i>
+                <h3>Presentaciones Hospitalarias</h3>
+                <p>Tanques de 425L, 680L, 3000L y 4500L. También disponibles en cilindros portátiles de 5L y 10L para
+                    uso domiciliario.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-shield-virus"></i>
+                <h3>Protocolos de Seguridad</h3>
+                <p>Manejo y almacenamiento según NOM-022-SSA3-2012. Inspección y mantenimiento certificado cada 6 meses.
+                </p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-truck-medical"></i>
+                <h3>Suministro Hospitalario</h3>
+                <p>Entrega programada para hospitales con sistema de inventario justo a tiempo. Disponibilidad 24/7 para
+                    emergencias.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clinic-medical"></i>
+                <h3>Uso Domiciliario</h3>
+                <p>Programas de oxigenoterapia para pacientes con EPOC, insuficiencia respiratoria y cuidados
+                    paliativos.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-file-medical-alt"></i>
+                <h3>Certificaciones</h3>
+                <p>ISO 13485:2016 para dispositivos médicos, Buenas Prácticas de Fabricación y certificación COFEPRIS
+                    vigente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="datos" class="data-section">
+        <h2 class="section-title" style="color: white;">Datos del Sector Salud</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Estadísticas de nuestro servicio médico</p>
+
+        <div class="data-grid">
+            <div class="data-item">
+                <div class="data-number">150+</div>
+                <div class="data-label">Hospitales Atendidos</div>
+            </div>
+            <div class="data-item">
+                <div class="data-number">99.5%</div>
+                <div class="data-label">Pureza Garantizada</div>
+            </div>
+            <div class="data-item">
+                <div class="data-number">24/7</div>
+                <div class="data-label">Disponibilidad</div>
+            </div>
+            <div class="data-item">
+                <div class="data-number">15 años</div>
+                <div class="data-label">Trayectoria</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cert-section">
+        <h2 class="section-title">Certificaciones y Normativas</h2>
+        <div class="cert-container">
+            <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <h4>ISO 13485</h4>
+                <p>Dispositivos Médicos</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-clipboard-check"></i>
+                <h4>COFEPRIS</h4>
+                <p>Registro Sanitario</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-flask"></i>
+                <h4>Farmacopea</h4>
+                <p>Estándares de Pureza</p>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-hard-hat"></i>
+                <h4>NOM-022</h4>
+                <p>Seguridad Hospitalaria</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="inventory-section">
+        <div class="inventory-container">
+            <h2 class="inventory-title">Inventario Hospitalario</h2>
+            <p class="inventory-subtitle">Disponibilidad de tanques de oxígeno medicinal</p>
+
+            <div id="inventory-loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Consultando inventario médico...</p>
+            </div>
+
+            <div id="inventory-content" style="display: none;">
+                <div class="inventory-stats">
+                    <div class="stat-box available">
+                        <div class="stat-number" id="available-count">0</div>
+                        <div class="stat-label">Disponibles</div>
+                        <div class="stat-detail">Para entrega inmediata</div>
+                    </div>
+                    <div class="stat-box unavailable">
+                        <div class="stat-number" id="unavailable-count">0</div>
+                        <div class="stat-label">En Uso/Mantenimiento</div>
+                        <div class="stat-detail">No disponibles actualmente</div>
+                    </div>
+                </div>
+                <div class="last-update">
+                    <i class="fas fa-sync-alt"></i>
+                    <span id="last-update">Última actualización: Cargando...</span>
+                    <div class="update-badge">Tiempo real hospitalario</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Air Sport Medical</h3>
+                <p>Proveedor autorizado de oxígeno medicinal para instituciones de salud. Comprometidos con la calidad y
+                    seguridad del paciente.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Horario Hospitalario</h3>
+                <p><i class="fas fa-clock"></i> Urgencias: 24/7</p>
+                <p><i class="fas fa-clock"></i> Administración: Lun-Vie 8:00-20:00</p>
+                <p><i class="fas fa-clock"></i> Sábados: 8:00-14:00</p>
+                <p><i class="fas fa-truck"></i> Entregas programadas</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Air Sport Medical. Todos los derechos reservados. | Registro Sanitario: 123456/2024</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
