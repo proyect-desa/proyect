@@ -468,3 +468,119 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+/* Nuevos estilos para las secciones añadidas */
+
+.distribution-section {
+    padding: 80px 5% 40px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.distribution-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.hospital-item {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.hospital-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 51, 102, 0.2);
+}
+
+.hospital-item i {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.hospital-item h3 {
+    color: #003366;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.hospital-item p {
+    color: #2d3748;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.work-mode {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.work-mode-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+.work-mode-card i {
+    font-size: 3rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.work-mode-card h3 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.work-mode-card p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.work-mode-card strong {
+    color: #003366;
+}
+
+/* Actualización de las cards existentes */
+.cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.info-card i.fa-gas-pump {
+    color: #003366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hospital-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .work-mode {
+        grid-template-columns: 1fr;
+    }
+    
+    .hospital-item {
+        padding: 20px;
+    }
+}
