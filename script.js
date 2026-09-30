@@ -1,5 +1,5 @@
 const INVENTARIO_URL = 'https://script.google.com/macros/s/AKfycbwcEXzU6_0Xp_NBgDGSZEYMTF5fxZ8KGA28e49UodfQnLa9J3aG7xYN_SW3cFd0yNKY/exec';
-const ENCUESTAS_URL = 'https://script.google.com/macros/s/AKfycbykbmnNCUgXunR5ZOfUUSU6Q1BFgHOMlfanP1rGLCQdqqFBUGfQ877CNFo7KwwED3gM/exec';
+const ENCUESTAS_URL = 'https://script.google.com/macros/s/AKfycbxS22RcpWP2sHvY9dLfdUHirz3xaGDO6gI3K7e8A-jEIXBQ4nQmg_bbFZeJA5RBX-c_/exec';
 
 let charts = {};
 
