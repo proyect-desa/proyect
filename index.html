@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air Sport - Equipos Médicos de Oxígeno</title>
     
-  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,6 +22,7 @@
                 <a href="#informacion">Información Médica</a>
                 <a href="#distribucion">Distribución</a>
                 <a href="#datos">Estadísticas</a>
+                <a href="#encuestas">Encuestas</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </nav>
@@ -136,6 +137,10 @@
                 <div class="data-number">24/7</div>
                 <div class="data-label">Disponibilidad</div>
             </div>
+            <div class="data-item">
+                <div class="data-number">67350284</div>
+                <div class="data-label">Línea de Referencia</div>
+            </div>
         </div>
     </section>
 
@@ -197,16 +202,115 @@
         </div>
     </section>
 
+    <section id="encuestas" class="charts-section">
+        <h2 class="section-title">Datos de Encuestas y Análisis</h2>
+        <p class="section-subtitle">Información recopilada de nuestros clientes y hospitales asociados</p>
+        <div class="chart-filters">
+            <button class="filter-btn active" data-period="all">Todo el período</button>
+            <button class="filter-btn" data-period="year">Último año</button>
+            <button class="filter-btn" data-period="month">Último mes</button>
+        </div>
+
+        <div id="charts-loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Cargando datos de encuestas...</p>
+        </div>
+
+        <div id="charts-content" class="charts-grid" style="display: none;">
+            
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-smile"></i> Satisfacción del Cliente</h3>
+                    <span class="chart-badge" id="total-encuestas">0 encuestas</span>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartSatisfaccion"></canvas>
+                </div>
+                <div class="chart-legend" id="legendSatisfaccion"></div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-users"></i> Distribución por Tipo de Cliente</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartTipoCliente"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-notes-medical"></i> Motivo de Uso del Oxígeno</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartMotivoUso"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card chart-wide">
+                <div class="chart-header">
+                    <h3><i class="fas fa-chart-line"></i> Evolución de Pedidos (Últimos 6 meses)</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartEvolucion"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-star"></i> Calidad del Servicio</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartCalidad"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> Cobertura por Zona</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="chartZonas"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-summary-table" id="dataSummary" style="display: none;">
+            <h3><i class="fas fa-table"></i> Resumen de Datos Recopilados</h3>
+            <div class="table-responsive">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Métrica</th>
+                            <th>Valor</th>
+                            <th>Tendencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summaryTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-reference">
+        <div class="contact-card">
+            <i class="fas fa-phone-volume"></i>
+            <h3>¿Dudas o Consultas?</h3>
+            <p>Número de referencia para cualquier duda sobre nuestros productos y servicios:</p>
+            <a href="tel:67350284" class="phone-number">
+                <i class="fas fa-phone"></i> 67350284
+            </a>
+            <p class="contact-note">Atención 24/7 para emergencias médicas</p>
+        </div>
+    </section>
+
     <footer id="contacto">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Air Sport Medical</h3>
                 <p>Proveedor autorizado de oxígeno medicinal para instituciones de salud. Venta y recarga de botellones de 6m² y 7m². Comprometidos con la calidad y seguridad del paciente.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/59167350284" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -216,10 +320,15 @@
                 <p><i class="fas fa-check-circle"></i> Hospital San Borja</p>
                 <p><i class="fas fa-check-circle"></i> Hospital San Ignacio</p>
             </div>
-            
+            <div class="footer-section">
+                <h3>Contacto Directo</h3>
+                <p><i class="fas fa-phone"></i> 67350284</p>
+                <p><i class="fas fa-envelope"></i> info@airsportmedical.com</p>
+                <p><i class="fas fa-clock"></i> Disponibilidad 24/7</p>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Air Sport Medical</p>
+            <p>&copy; 2026 Air Sport Medical | Línea de referencia: 67350284</p>
         </div>
     </footer>
 
